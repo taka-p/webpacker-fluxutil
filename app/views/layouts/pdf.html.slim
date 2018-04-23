@@ -7,7 +7,7 @@ html
     /= wicked_pdf_stylesheet_link_tag asset_pack_path('application')
     = stylesheet_pack_tag 'application'
     style
-      = File.read("#{Rails.root}/public#{Webpacker.manifest.lookup!('application.css')}").to_s
+      = custom_asset_pack_binary 'application.css'
   body
     .container
       = yield

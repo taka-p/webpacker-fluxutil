@@ -6,7 +6,7 @@ html
     = csrf_meta_tags
 
     style
-      = File.read("#{Rails.root}/public#{Webpacker.manifest.lookup!('application.css')}").to_s
+      = custom_asset_pack_binary 'application.css'
   body
 
     = yield
