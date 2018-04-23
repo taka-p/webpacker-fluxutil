@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title
+      | WebpackerReactExample
+    = csrf_meta_tags
+
+    style
+      = File.read("#{Rails.root}/public#{Webpacker.manifest.lookup!('application.css')}").to_s
+  body
+
+    = yield
