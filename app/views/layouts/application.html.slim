@@ -4,9 +4,6 @@ html
     title
       | WebpackerReactExample
     = csrf_meta_tags
-
-    style
-      = custom_asset_pack_binary 'application.css'
+    = stylesheet_pack_tag 'application'
   body
-
     = yield

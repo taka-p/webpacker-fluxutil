@@ -3,12 +3,7 @@ html
   head
     title
       | PDF
-    /= wicked_pdf_stylesheet_link_tag 'http://localhost:8080/packs/application-d41d8cd98f00b204e9800998ecf8427e'
-    /= wicked_pdf_stylesheet_link_tag asset_pack_path('application')
     = stylesheet_pack_tag 'application'
-    style
-      = custom_asset_pack_binary 'application.css'
   body
     .container
       = yield
-      = 'bbbbbbbbbbbbbbbbbbbbbbbbbbbb'
